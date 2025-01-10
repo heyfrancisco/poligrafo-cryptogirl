@@ -105,9 +105,24 @@ const LeverageComparison: React.FC = () => {
       <Card className="max-w-5xl w-full">
         <CardHeader>
           <CardTitle className="text-xl pb-2">Poligrafo da Crypto Girl</CardTitle>
+          <p className="text-sm text-muted-foreground w-2/3">
+            Simulação de ganhos mensais com base nos sinais partilhados pela{" "}
+            <a
+              href="https://www.instagram.com/cryptogirl.pt/"
+              target="_blank"
+              rel="noopener"
+              className="text-indigo-500"
+            >
+              @Cryptogirl.pt
+            </a>{" "}
+            considerando sempre no 1º Alvo, mas utilizando stop loss total em casos de perda.
+          </p>
+          <p className="text-sm text-muted-foreground pb-5">
+            Os resultados reais podem variar significativamente dependendo da estratégia de saída.
+          </p>
           <div className="mt-4 flex flex-col md:flex-row items-start md:items-center gap-4">
             <div className="flex items-center gap-2">
-              <label htmlFor="month" className="text-sm font-medium">
+              <label htmlFor="month" className="text-sm font-bold">
                 Mês:
               </label>
               <select
@@ -124,7 +139,7 @@ const LeverageComparison: React.FC = () => {
               </select>
             </div>
             <div className="flex items-center gap-2">
-              <label htmlFor="investment" className="text-sm font-medium">
+              <label htmlFor="investment" className="text-sm font-bold">
                 Investimento Inicial: $
               </label>
               <input
@@ -138,8 +153,8 @@ const LeverageComparison: React.FC = () => {
               />
             </div>
             <div className="flex items-center gap-2">
-              <label htmlFor="betPercentage" className="text-sm font-medium">
-                % da Banca por Trade:
+              <label htmlFor="betPercentage" className="text-sm font-bold">
+                % da Banca Por Trade:
               </label>
               <input
                 id="betPercentage"

@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Poligrafo da Crypto Girl 📊💱
 
-## Getting Started
+## Descrição
 
-First, run the development server:
+O Poligrafo da Crypto Girl é uma aplicação web que permite simular ganhos mensais com base nos sinais de trading partilhados pela [@Cryptogirl.pt](https://www.instagram.com/cryptogirl.pt/). A aplicação permite comparar diferentes estratégias de alavancagem e calcular o crescimento potencial de uma carteira de investimento.
 
+## Funcionalidades Principais
+
+- Simulação de crescimento de bankroll com diferentes níveis de alavancagem (1x, 5x, 10x)
+- Personalização do investimento inicial
+- Ajuste da percentagem de bankroll por trade
+- Seleção de mês para análise
+- Visualização gráfica da evolução do investimento
+- Cálculo de retorno para cada estratégia de alavancagem
+
+## Tecnologias Utilizadas
+
+- Next.js
+- React
+- Recharts (para visualização de dados)
+- Tailwind CSS
+- TypeScript
+
+## Pré-requisitos
+
+- Node.js (versão 16 ou superior)
+- npm ou yarn
+
+## Instalação
+
+1. Clonar o repositório
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/seu-username/calculadora-crypto.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Instalar dependências
+```bash
+cd calculadora-crypto
+npm install
+# ou
+yarn install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Iniciar o servidor de desenvolvimento
+```bash
+npm run dev
+# ou
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Configuração
 
-## Learn More
+A aplicação utiliza um ficheiro `trades.json` localizado em `/lib/trades.json` para armazenar os dados históricos de trades. Certifique-se de que este ficheiro está corretamente configurado com os dados dos trades.
 
-To learn more about Next.js, take a look at the following resources:
+## Como Utilizar
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Selecione o mês que pretende analisar
+2. Insira o valor do investimento inicial
+3. Ajuste a percentagem da banca por trade
+4. Observe a simulação de crescimento para diferentes níveis de alavancagem
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Avisos Importantes
 
-## Deploy on Vercel
+⚠️ **Nota:** A simulação utiliza **apenas o 1º Alvo** fornecido pela Crypto Girl, considerando stop loss total em casos de perda. Os resultados apresentados são baseados em dados históricos e podem variar significativamente dependendo da estratégia de saída e das condições de mercado.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contribuições
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contribuições são bem-vindas! Por favor, abra um issue ou submeta um pull request.
