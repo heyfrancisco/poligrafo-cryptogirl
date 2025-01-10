@@ -1,101 +1,222 @@
-import Image from "next/image";
+"use client";
+import React, { useEffect, useState } from "react";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import tradesData from "@/lib/trades.json";
 
-export default function Home() {
+interface Trade {
+  date: string;
+  asset: string;
+  pnl: number;
+  pnl_5x: number;
+  pnl_10x: number;
+}
+
+interface TradesData {
+  [key: string]: Trade[];
+}
+
+interface BankrollData {
+  x: number;
+  date: string;
+  asset: string;
+  bankroll_1x: number;
+  bankroll_5x: number;
+  bankroll_10x: number;
+}
+
+const LeverageComparison: React.FC = () => {
+  const [initialInvestment, setInitialInvestment] = useState<number>(100);
+  const [betPercentage, setBetPercentage] = useState<number>(20);
+  const [selectedMonth, setSelectedMonth] = useState<string>(Object.keys(tradesData)[0]);
+  const [data, setData] = useState<BankrollData[]>([]);
+  const [final, setFinal] = useState<BankrollData | null>(null);
+
+  const calculateBankrollGrowth = (investment: number): BankrollData[] => {
+    let bankroll_1x = investment;
+    let bankroll_5x = investment;
+    let bankroll_10x = investment;
+    const betMultiplier = betPercentage / 100;
+    let calculatedData: BankrollData[] = [];
+    let tradeNumber = 0;
+
+    const trades = (tradesData as TradesData)[selectedMonth] || [];
+
+    trades.forEach((trade) => {
+      tradeNumber += 1;
+
+      // 1x
+      const betAmount_1x = bankroll_1x * betMultiplier;
+      const pnl_1x = betAmount_1x * trade.pnl;
+      bankroll_1x += pnl_1x;
+
+      // 5x
+      const betAmount_5x = bankroll_5x * betMultiplier;
+      const pnl_5x = betAmount_5x * trade.pnl_5x;
+      bankroll_5x += pnl_5x;
+
+      // 10x
+      const betAmount_10x = bankroll_10x * betMultiplier;
+      const pnl_10x = betAmount_10x * trade.pnl_10x;
+      bankroll_10x += pnl_10x;
+
+      calculatedData.push({
+        x: tradeNumber,
+        date: trade.date,
+        asset: trade.asset,
+        bankroll_1x: Math.round(bankroll_1x * 100) / 100,
+        bankroll_5x: Math.round(bankroll_5x * 100) / 100,
+        bankroll_10x: Math.round(bankroll_10x * 100) / 100,
+      });
+    });
+
+    return calculatedData;
+  };
+
+  useEffect(() => {
+    const newData = calculateBankrollGrowth(initialInvestment);
+    setData(newData);
+    setFinal(newData[newData.length - 1] || null);
+  }, [initialInvestment, betPercentage, selectedMonth]);
+
+  const handleInvestmentChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInitialInvestment(Math.max(1, Number(e.target.value)));
+  };
+
+  const handleBetPercentageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setBetPercentage(Math.max(1, Math.min(100, Number(e.target.value))));
+  };
+
+  const handleMonthChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedMonth(e.target.value);
+  };
+
+  const formatTooltipLabel = (value: any): string => {
+    // Access the actual data item that was passed to the tooltip
+    const trade = data.find((item) => item.date === value);
+    if (!trade) return "";
+    return `Trade #${trade.x} - ${trade.date}`;
+  };
+
+  const formatValue = (value: number): string => `$${value.toFixed(2)}`;
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen flex items-center justify-center p-4">
+      <Card className="max-w-5xl w-full">
+        <CardHeader>
+          <CardTitle className="text-xl pb-2">Poligrafo da Crypto Girl</CardTitle>
+          <div className="mt-4 flex flex-col md:flex-row items-start md:items-center gap-4">
+            <div className="flex items-center gap-2">
+              <label htmlFor="month" className="text-sm font-medium">
+                Mês:
+              </label>
+              <select
+                id="month"
+                value={selectedMonth}
+                onChange={handleMonthChange}
+                className="px-2 py-1 border rounded"
+              >
+                {Object.keys(tradesData).map((month) => (
+                  <option key={month} value={month}>
+                    {month}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="flex items-center gap-2">
+              <label htmlFor="investment" className="text-sm font-medium">
+                Investimento Inicial: $
+              </label>
+              <input
+                id="investment"
+                type="number"
+                value={initialInvestment}
+                onChange={handleInvestmentChange}
+                className="w-24 px-2 py-1 border rounded text-right"
+                min="1"
+                step="100"
+              />
+            </div>
+            <div className="flex items-center gap-2">
+              <label htmlFor="betPercentage" className="text-sm font-medium">
+                % da Banca por Trade:
+              </label>
+              <input
+                id="betPercentage"
+                type="number"
+                value={betPercentage}
+                onChange={handleBetPercentageChange}
+                className="w-20 px-2 py-1 border rounded text-right"
+                min="1"
+                max="100"
+                step="1"
+              />
+              <span className="text-sm">%</span>
+            </div>
+          </div>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="p-4 border rounded">
+                <div className="text-sm font-medium">1x (Sem Alavancagem)</div>
+                <div className="text-2xl font-bold">${final?.bankroll_1x.toFixed(2)}</div>
+                <div className="text-sm text-gray-500">
+                  Retorno: {(((final?.bankroll_1x ?? 0) / initialInvestment - 1) * 100).toFixed(2)}%
+                </div>
+              </div>
+              <div className="p-4 border rounded">
+                <div className="text-sm font-medium">5x Alavancagem</div>
+                <div className="text-2xl font-bold">${final?.bankroll_5x.toFixed(2)}</div>
+                <div className="text-sm text-gray-500">
+                  Retorno: {(((final?.bankroll_5x ?? 0) / initialInvestment - 1) * 100).toFixed(2)}%
+                </div>
+              </div>
+              <div className="p-4 border rounded">
+                <div className="text-sm font-medium">10x Alavancagem</div>
+                <div className="text-2xl font-bold">${final?.bankroll_10x.toFixed(2)}</div>
+                <div className="text-sm text-gray-500">
+                  Retorno: {(((final?.bankroll_10x ?? 0) / initialInvestment - 1) * 100).toFixed(2)}%
+                </div>
+              </div>
+            </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+            <div className="w-full h-[400px]">
+              <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={data}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="date" label={{ value: "Days of the Month", position: "bottom", offset: -1 }} />
+                  <YAxis
+                    tickFormatter={(value) => `$${value}`}
+                    domain={["dataMin - 1", "dataMax + 10"]}
+                    interval={0}
+                    allowDataOverflow={true}
+                  />
+                  <Tooltip formatter={(value) => `$${value}`} labelFormatter={formatTooltipLabel} />
+                  <Legend wrapperStyle={{ paddingTop: "30px" }} />
+                  <Line
+                    type="monotone"
+                    dataKey="bankroll_1x"
+                    name="1x (Sem Alavancagem)"
+                    stroke="#8884d8"
+                    strokeWidth={2}
+                  />
+                  <Line type="monotone" dataKey="bankroll_5x" name="5x Alavancagem" stroke="#82ca9d" strokeWidth={2} />
+                  <Line
+                    type="monotone"
+                    dataKey="bankroll_10x"
+                    name="10x Alavancagem"
+                    stroke="#ff7300"
+                    strokeWidth={2}
+                  />
+                </LineChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
-}
+};
+
+export default LeverageComparison;
