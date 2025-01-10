@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import tradesData from "@/lib/trades.json";
@@ -32,46 +32,49 @@ const LeverageComparison: React.FC = () => {
   const [data, setData] = useState<BankrollData[]>([]);
   const [final, setFinal] = useState<BankrollData | null>(null);
 
-  const calculateBankrollGrowth = (investment: number): BankrollData[] => {
-    let bankroll_1x = investment;
-    let bankroll_5x = investment;
-    let bankroll_10x = investment;
-    const betMultiplier = betPercentage / 100;
-    let calculatedData: BankrollData[] = [];
-    let tradeNumber = 0;
+  const calculateBankrollGrowth = useCallback(
+    (investment: number): BankrollData[] => {
+      let bankroll_1x = investment;
+      let bankroll_5x = investment;
+      let bankroll_10x = investment;
+      const betMultiplier = betPercentage / 100;
+      const calculatedData: BankrollData[] = [];
+      let tradeNumber = 0;
 
-    const trades = (tradesData as TradesData)[selectedMonth] || [];
+      const trades = (tradesData as TradesData)[selectedMonth] || [];
 
-    trades.forEach((trade) => {
-      tradeNumber += 1;
+      trades.forEach((trade) => {
+        tradeNumber += 1;
 
-      // 1x
-      const betAmount_1x = bankroll_1x * betMultiplier;
-      const pnl_1x = betAmount_1x * trade.pnl;
-      bankroll_1x += pnl_1x;
+        // 1x
+        const betAmount_1x = bankroll_1x * betMultiplier;
+        const pnl_1x = betAmount_1x * trade.pnl;
+        bankroll_1x += pnl_1x;
 
-      // 5x
-      const betAmount_5x = bankroll_5x * betMultiplier;
-      const pnl_5x = betAmount_5x * trade.pnl_5x;
-      bankroll_5x += pnl_5x;
+        // 5x
+        const betAmount_5x = bankroll_5x * betMultiplier;
+        const pnl_5x = betAmount_5x * trade.pnl_5x;
+        bankroll_5x += pnl_5x;
 
-      // 10x
-      const betAmount_10x = bankroll_10x * betMultiplier;
-      const pnl_10x = betAmount_10x * trade.pnl_10x;
-      bankroll_10x += pnl_10x;
+        // 10x
+        const betAmount_10x = bankroll_10x * betMultiplier;
+        const pnl_10x = betAmount_10x * trade.pnl_10x;
+        bankroll_10x += pnl_10x;
 
-      calculatedData.push({
-        x: tradeNumber,
-        date: trade.date,
-        asset: trade.asset,
-        bankroll_1x: Math.round(bankroll_1x * 100) / 100,
-        bankroll_5x: Math.round(bankroll_5x * 100) / 100,
-        bankroll_10x: Math.round(bankroll_10x * 100) / 100,
+        calculatedData.push({
+          x: tradeNumber,
+          date: trade.date,
+          asset: trade.asset,
+          bankroll_1x: Math.round(bankroll_1x * 100) / 100,
+          bankroll_5x: Math.round(bankroll_5x * 100) / 100,
+          bankroll_10x: Math.round(bankroll_10x * 100) / 100,
+        });
       });
-    });
 
-    return calculatedData;
-  };
+      return calculatedData;
+    },
+    [betPercentage, selectedMonth]
+  ); // Added dependencies for useCallback
 
   useEffect(() => {
     const newData = calculateBankrollGrowth(initialInvestment);
@@ -91,14 +94,12 @@ const LeverageComparison: React.FC = () => {
     setSelectedMonth(e.target.value);
   };
 
-  const formatTooltipLabel = (value: any): string => {
+  const formatTooltipLabel = (value: string): string => {
     // Access the actual data item that was passed to the tooltip
     const trade = data.find((item) => item.date === value);
     if (!trade) return "";
     return `Trade #${trade.x} - ${trade.date}`;
   };
-
-  const formatValue = (value: number): string => `$${value.toFixed(2)}`;
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
