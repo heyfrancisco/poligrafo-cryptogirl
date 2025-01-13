@@ -264,12 +264,12 @@ const LeverageComparison: React.FC = () => {
           <p className="text-xs text-muted-foreground pt-4 px-4 pb-1">
             Código fonte disponível no{" "}
             <a
-              href="https://github.com/yourusername/calculadora-crypto"
+              href="https://github.com/heyfrancisco/calculadora-crypto"
               className="text-indigo-500 hover:underline"
               target="_blank"
               rel="noopener noreferrer"
             >
-              GitHub
+              ❤ GitHub
             </a>
             . Histórico de trades podem ser encontrado em{" "}
             <a
