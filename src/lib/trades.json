@@ -1,105 +1,798 @@
 {
   "Outubro 2024": [
-    { "date": "Oct 1", "asset": "MANA", "pnl": 0.0214, "pnl_5x": 0.1072, "pnl_10x": 0.2143 },
-    { "date": "Oct 1", "asset": "TWT", "pnl": 0.0182, "pnl_5x": 0.0909, "pnl_10x": 0.1818 },
-    { "date": "Oct 2", "asset": "AXS", "pnl": 0.0248, "pnl_5x": 0.1244, "pnl_10x": 0.2489 },
-    { "date": "Oct 3", "asset": "KLAY", "pnl": 0.0191, "pnl_5x": 0.0953, "pnl_10x": 0.1906 },
-    { "date": "Oct 3", "asset": "JASMY", "pnl": 0.0202, "pnl_5x": 0.1009, "pnl_10x": 0.2018 },
-    { "date": "Oct 3", "asset": "ARK", "pnl": 0.0307, "pnl_5x": 0.1533, "pnl_10x": 0.3067 },
-    { "date": "Oct 4", "asset": "FTM", "pnl": 0.0224, "pnl_5x": 0.1122, "pnl_10x": 0.2244 },
-    { "date": "Oct 6", "asset": "BLUR", "pnl": 0.0149, "pnl_5x": 0.0746, "pnl_10x": 0.1493 },
-    { "date": "Oct 6", "asset": "UMA", "pnl": 0.0205, "pnl_5x": 0.1024, "pnl_10x": 0.2047 },
-    { "date": "Oct 7", "asset": "POWR", "pnl": 0.0304, "pnl_5x": 0.1522, "pnl_10x": 0.3044 },
-    { "date": "Oct 7", "asset": "ONT", "pnl": -0.0433, "pnl_5x": -0.2163, "pnl_10x": -0.4327 },
-    { "date": "Oct 9", "asset": "CELO", "pnl": 0.0178, "pnl_5x": 0.0888, "pnl_10x": 0.1775 },
-    { "date": "Oct 10", "asset": "DYDX", "pnl": 0.0292, "pnl_5x": 0.1461, "pnl_10x": 0.2921 },
-    { "date": "Oct 11", "asset": "STX", "pnl": 0.0294, "pnl_5x": 0.147, "pnl_10x": 0.294 },
-    { "date": "Oct 11", "asset": "OXT", "pnl": 0.0256, "pnl_5x": 0.1278, "pnl_10x": 0.2555 },
-    { "date": "Oct 13", "asset": "PERP", "pnl": 0.0213, "pnl_5x": 0.1063, "pnl_10x": 0.2127 },
-    { "date": "Oct 13", "asset": "WLD", "pnl": 0.02, "pnl_5x": 0.1001, "pnl_10x": 0.2001 },
-    { "date": "Oct 15", "asset": "MAGIC", "pnl": 0.0132, "pnl_5x": 0.0659, "pnl_10x": 0.1317 },
-    { "date": "Oct 15", "asset": "HIFI", "pnl": 0.0226, "pnl_5x": 0.1132, "pnl_10x": 0.2265 },
-    { "date": "Oct 15", "asset": "GAS", "pnl": 0.0252, "pnl_5x": 0.1261, "pnl_10x": 0.2522 },
-    { "date": "Oct 15", "asset": "UNI", "pnl": 0.0213, "pnl_5x": 0.1067, "pnl_10x": 0.2133 },
-    { "date": "Oct 16", "asset": "WOO", "pnl": -0.0408, "pnl_5x": -0.2041, "pnl_10x": -0.4083 },
-    { "date": "Oct 16", "asset": "SKL", "pnl": -0.0372, "pnl_5x": -0.186, "pnl_10x": -0.3719 },
-    { "date": "Oct 16", "asset": "GMX", "pnl": 0.0145, "pnl_5x": 0.0724, "pnl_10x": 0.1449 },
-    { "date": "Oct 17", "asset": "JOE", "pnl": -0.0268, "pnl_5x": -0.134, "pnl_10x": -0.268 },
-    { "date": "Oct 18", "asset": "SUI", "pnl": 0.0261, "pnl_5x": 0.1305, "pnl_10x": 0.2609 },
-    { "date": "Oct 18", "asset": "DAR", "pnl": 0.0271, "pnl_5x": 0.1357, "pnl_10x": 0.2713 },
-    { "date": "Oct 18", "asset": "APT", "pnl": 0.0148, "pnl_5x": 0.0742, "pnl_10x": 0.1483 },
-    { "date": "Oct 20", "asset": "CHR", "pnl": 0.0281, "pnl_5x": 0.1404, "pnl_10x": 0.2809 },
-    { "date": "Oct 20", "asset": "DUSK", "pnl": -0.0367, "pnl_5x": -0.1835, "pnl_10x": -0.3671 },
-    { "date": "Oct 22", "asset": "RLC", "pnl": 0.0202, "pnl_5x": 0.1009, "pnl_10x": 0.2018 },
-    { "date": "Oct 22", "asset": "ASTR", "pnl": 0.0183, "pnl_5x": 0.0916, "pnl_10x": 0.1832 },
-    { "date": "Oct 24", "asset": "ORBS", "pnl": -0.0419, "pnl_5x": -0.2093, "pnl_10x": -0.4187 },
-    { "date": "Oct 24", "asset": "DOGE", "pnl": 0.0226, "pnl_5x": 0.1131, "pnl_10x": 0.2262 },
-    { "date": "Oct 24", "asset": "API3", "pnl": 0.0258, "pnl_5x": 0.1292, "pnl_10x": 0.2583 },
-    { "date": "Oct 28", "asset": "ACH", "pnl": 0.0204, "pnl_5x": 0.102, "pnl_10x": 0.2041 },
-    { "date": "Oct 29", "asset": "CKB", "pnl": 0.0211, "pnl_5x": 0.1054, "pnl_10x": 0.2107 },
-    { "date": "Oct 29", "asset": "PEOPLE", "pnl": -0.0429, "pnl_5x": -0.2144, "pnl_10x": -0.4287 },
-    { "date": "Oct 29", "asset": "LINA", "pnl": 0.022, "pnl_5x": 0.1101, "pnl_10x": 0.2203 },
-    { "date": "Oct 29", "asset": "RIF", "pnl": 0.0226, "pnl_5x": 0.1138, "pnl_10x": 0.2275 },
-    { "date": "Oct 29", "asset": "YGG", "pnl": -0.047, "pnl_5x": -0.235, "pnl_10x": -0.47 },
-    { "date": "Oct 30", "asset": "ORDI", "pnl": 0.0114, "pnl_5x": 0.057, "pnl_10x": 0.1141 }
-  ],
+  {
+    "date": "Oct 1",
+    "asset": "MANA",
+    "pnl": 0.0214,
+    "pnl_5x": 0.1072,
+    "pnl_10x": 0.2143,
+    "pnl_20x": 0.4286
+  },
+  {
+    "date": "Oct 1",
+    "asset": "TWT",
+    "pnl": 0.0182,
+    "pnl_5x": 0.0909,
+    "pnl_10x": 0.1818,
+    "pnl_20x": 0.3636
+  },
+  {
+    "date": "Oct 2",
+    "asset": "AXS",
+    "pnl": 0.0248,
+    "pnl_5x": 0.1244,
+    "pnl_10x": 0.2489,
+    "pnl_20x": 0.4978
+  },
+  {
+    "date": "Oct 3",
+    "asset": "KLAY",
+    "pnl": 0.0191,
+    "pnl_5x": 0.0953,
+    "pnl_10x": 0.1906,
+    "pnl_20x": 0.3812
+  },
+  {
+    "date": "Oct 3",
+    "asset": "JASMY",
+    "pnl": 0.0202,
+    "pnl_5x": 0.1009,
+    "pnl_10x": 0.2018,
+    "pnl_20x": 0.4036
+  },
+  {
+    "date": "Oct 3",
+    "asset": "ARK",
+    "pnl": 0.0307,
+    "pnl_5x": 0.1533,
+    "pnl_10x": 0.3067,
+    "pnl_20x": 0.6134
+  },
+  {
+    "date": "Oct 4",
+    "asset": "FTM",
+    "pnl": 0.0224,
+    "pnl_5x": 0.1122,
+    "pnl_10x": 0.2244,
+    "pnl_20x": 0.4488
+  },
+  {
+    "date": "Oct 6",
+    "asset": "BLUR",
+    "pnl": 0.0149,
+    "pnl_5x": 0.0746,
+    "pnl_10x": 0.1493,
+    "pnl_20x": 0.2986
+  },
+  {
+    "date": "Oct 6",
+    "asset": "UMA",
+    "pnl": 0.0205,
+    "pnl_5x": 0.1024,
+    "pnl_10x": 0.2047,
+    "pnl_20x": 0.4094
+  },
+  {
+    "date": "Oct 7",
+    "asset": "POWR",
+    "pnl": 0.0304,
+    "pnl_5x": 0.1522,
+    "pnl_10x": 0.3044,
+    "pnl_20x": 0.6088
+  },
+  {
+    "date": "Oct 7",
+    "asset": "ONT",
+    "pnl": -0.0433,
+    "pnl_5x": -0.2163,
+    "pnl_10x": -0.4327,
+    "pnl_20x": -0.8654
+  },
+  {
+    "date": "Oct 9",
+    "asset": "CELO",
+    "pnl": 0.0178,
+    "pnl_5x": 0.0888,
+    "pnl_10x": 0.1775,
+    "pnl_20x": 0.355
+  },
+  {
+    "date": "Oct 10",
+    "asset": "DYDX",
+    "pnl": 0.0292,
+    "pnl_5x": 0.1461,
+    "pnl_10x": 0.2921,
+    "pnl_20x": 0.5842
+  },
+  {
+    "date": "Oct 11",
+    "asset": "STX",
+    "pnl": 0.0294,
+    "pnl_5x": 0.147,
+    "pnl_10x": 0.294,
+    "pnl_20x": 0.588
+  },
+  {
+    "date": "Oct 11",
+    "asset": "OXT",
+    "pnl": 0.0256,
+    "pnl_5x": 0.1278,
+    "pnl_10x": 0.2555,
+    "pnl_20x": 0.511
+  },
+  {
+    "date": "Oct 13",
+    "asset": "PERP",
+    "pnl": 0.0213,
+    "pnl_5x": 0.1063,
+    "pnl_10x": 0.2127,
+    "pnl_20x": 0.4254
+  },
+  {
+    "date": "Oct 13",
+    "asset": "WLD",
+    "pnl": 0.02,
+    "pnl_5x": 0.1001,
+    "pnl_10x": 0.2001,
+    "pnl_20x": 0.4002
+  },
+  {
+    "date": "Oct 15",
+    "asset": "MAGIC",
+    "pnl": 0.0132,
+    "pnl_5x": 0.0659,
+    "pnl_10x": 0.1317,
+    "pnl_20x": 0.2634
+  },
+  {
+    "date": "Oct 15",
+    "asset": "HIFI",
+    "pnl": 0.0226,
+    "pnl_5x": 0.1132,
+    "pnl_10x": 0.2265,
+    "pnl_20x": 0.453
+  },
+  {
+    "date": "Oct 15",
+    "asset": "GAS",
+    "pnl": 0.0252,
+    "pnl_5x": 0.1261,
+    "pnl_10x": 0.2522,
+    "pnl_20x": 0.5044
+  },
+  {
+    "date": "Oct 15",
+    "asset": "UNI",
+    "pnl": 0.0213,
+    "pnl_5x": 0.1067,
+    "pnl_10x": 0.2133,
+    "pnl_20x": 0.4266
+  },
+  {
+    "date": "Oct 16",
+    "asset": "WOO",
+    "pnl": -0.0408,
+    "pnl_5x": -0.2041,
+    "pnl_10x": -0.4083,
+    "pnl_20x": -0.8166
+  },
+  {
+    "date": "Oct 16",
+    "asset": "SKL",
+    "pnl": -0.0372,
+    "pnl_5x": -0.186,
+    "pnl_10x": -0.3719,
+    "pnl_20x": -0.7438
+  },
+  {
+    "date": "Oct 16",
+    "asset": "GMX",
+    "pnl": 0.0145,
+    "pnl_5x": 0.0724,
+    "pnl_10x": 0.1449,
+    "pnl_20x": 0.2898
+  },
+  {
+    "date": "Oct 17",
+    "asset": "JOE",
+    "pnl": -0.0268,
+    "pnl_5x": -0.134,
+    "pnl_10x": -0.268,
+    "pnl_20x": -0.536
+  },
+  {
+    "date": "Oct 18",
+    "asset": "SUI",
+    "pnl": 0.0261,
+    "pnl_5x": 0.1305,
+    "pnl_10x": 0.2609,
+    "pnl_20x": 0.5218
+  },
+  {
+    "date": "Oct 18",
+    "asset": "DAR",
+    "pnl": 0.0271,
+    "pnl_5x": 0.1357,
+    "pnl_10x": 0.2713,
+    "pnl_20x": 0.5426
+  },
+  {
+    "date": "Oct 18",
+    "asset": "APT",
+    "pnl": 0.0148,
+    "pnl_5x": 0.0742,
+    "pnl_10x": 0.1483,
+    "pnl_20x": 0.2966
+  },
+  {
+    "date": "Oct 20",
+    "asset": "CHR",
+    "pnl": 0.0281,
+    "pnl_5x": 0.1404,
+    "pnl_10x": 0.2809,
+    "pnl_20x": 0.5618
+  },
+  {
+    "date": "Oct 20",
+    "asset": "DUSK",
+    "pnl": -0.0367,
+    "pnl_5x": -0.1835,
+    "pnl_10x": -0.3671,
+    "pnl_20x": -0.7342
+  },
+  {
+    "date": "Oct 22",
+    "asset": "RLC",
+    "pnl": 0.0202,
+    "pnl_5x": 0.1009,
+    "pnl_10x": 0.2018,
+    "pnl_20x": 0.4036
+  },
+  {
+    "date": "Oct 22",
+    "asset": "ASTR",
+    "pnl": 0.0183,
+    "pnl_5x": 0.0916,
+    "pnl_10x": 0.1832,
+    "pnl_20x": 0.3664
+  },
+  {
+    "date": "Oct 24",
+    "asset": "ORBS",
+    "pnl": -0.0419,
+    "pnl_5x": -0.2093,
+    "pnl_10x": -0.4187,
+    "pnl_20x": -0.8374
+  },
+  {
+    "date": "Oct 24",
+    "asset": "DOGE",
+    "pnl": 0.0226,
+    "pnl_5x": 0.1131,
+    "pnl_10x": 0.2262,
+    "pnl_20x": 0.4524
+  },
+  {
+    "date": "Oct 24",
+    "asset": "API3",
+    "pnl": 0.0258,
+    "pnl_5x": 0.1292,
+    "pnl_10x": 0.2583,
+    "pnl_20x": 0.5166
+  },
+  {
+    "date": "Oct 28",
+    "asset": "ACH",
+    "pnl": 0.0204,
+    "pnl_5x": 0.102,
+    "pnl_10x": 0.2041,
+    "pnl_20x": 0.4082
+  },
+  {
+    "date": "Oct 29",
+    "asset": "CKB",
+    "pnl": 0.0211,
+    "pnl_5x": 0.1054,
+    "pnl_10x": 0.2107,
+    "pnl_20x": 0.4214
+  },
+  {
+    "date": "Oct 29",
+    "asset": "PEOPLE",
+    "pnl": -0.0429,
+    "pnl_5x": -0.2144,
+    "pnl_10x": -0.4287,
+    "pnl_20x": -0.8574
+  },
+  {
+    "date": "Oct 29",
+    "asset": "LINA",
+    "pnl": 0.022,
+    "pnl_5x": 0.1101,
+    "pnl_10x": 0.2203,
+    "pnl_20x": 0.4406
+  },
+  {
+    "date": "Oct 29",
+    "asset": "RIF",
+    "pnl": 0.0226,
+    "pnl_5x": 0.1138,
+    "pnl_10x": 0.2275,
+    "pnl_20x": 0.455
+  },
+  {
+    "date": "Oct 29",
+    "asset": "YGG",
+    "pnl": -0.047,
+    "pnl_5x": -0.235,
+    "pnl_10x": -0.47,
+    "pnl_20x": -0.94
+  },
+  {
+    "date": "Oct 30",
+    "asset": "ORDI",
+    "pnl": 0.0114,
+    "pnl_5x": 0.057,
+    "pnl_10x": 0.1141,
+    "pnl_20x": 0.2282
+  }
+],
   "November 2024": [
-    { "date": "Nov 4", "asset": "RVN", "pnl": 0.0245, "pnl_5x": 0.1226, "pnl_10x": 0.2451 },
-    { "date": "Nov 5", "asset": "KEY", "pnl": 0.0208, "pnl_5x": 0.1038, "pnl_10x": 0.2078 },
-    { "date": "Nov 6", "asset": "PENDLE", "pnl": 0.0202, "pnl_5x": 0.101, "pnl_10x": 0.202 },
-    { "date": "Nov 6", "asset": "MASK", "pnl": 0.0211, "pnl_5x": 0.1054, "pnl_10x": 0.2108 },
-    { "date": "Nov 7", "asset": "DOG", "pnl": -0.0483, "pnl_5x": -0.2417, "pnl_10x": -0.4834 },
-    { "date": "Nov 7", "asset": "LDO", "pnl": 0.0184, "pnl_5x": 0.0921, "pnl_10x": 0.1843 },
-    { "date": "Nov 7", "asset": "BCH", "pnl": 0.0189, "pnl_5x": 0.0943, "pnl_10x": 0.1885 },
-    { "date": "Nov 8", "asset": "ILV", "pnl": 0.0171, "pnl_5x": 0.0853, "pnl_10x": 0.1705 },
-    { "date": "Nov 11", "asset": "SXP", "pnl": 0.0235, "pnl_5x": 0.1175, "pnl_10x": 0.235 },
-    { "date": "Nov 11", "asset": "PXS", "pnl": 0.0279, "pnl_5x": 0.1395, "pnl_10x": 0.2789 },
-    { "date": "Nov 11", "asset": "SNX", "pnl": 0.0204, "pnl_5x": 0.1022, "pnl_10x": 0.2044 },
-    { "date": "Nov 12", "asset": "KAVA", "pnl": 0.0187, "pnl_5x": 0.0935, "pnl_10x": 0.1871 },
-    { "date": "Nov 12", "asset": "BAT", "pnl": 0.0145, "pnl_5x": 0.0725, "pnl_10x": 0.145 },
-    { "date": "Nov 13", "asset": "DOGE", "pnl": 0.0287, "pnl_5x": 0.1434, "pnl_10x": 0.2867 },
-    { "date": "Nov 13", "asset": "COMBO", "pnl": 0.0254, "pnl_5x": 0.1268, "pnl_10x": 0.2536 },
-    { "date": "Nov 13", "asset": "XLM", "pnl": 0.0189, "pnl_5x": 0.0944, "pnl_10x": 0.1888 },
-    { "date": "Nov 13", "asset": "RUNE", "pnl": 0.0282, "pnl_5x": 0.1408, "pnl_10x": 0.2816 },
-    { "date": "Nov 13", "asset": "RIF", "pnl": 0.0181, "pnl_5x": 0.0943, "pnl_10x": 0.1886 },
-    { "date": "Nov 13", "asset": "ARK", "pnl": 0.018, "pnl_5x": 0.0898, "pnl_10x": 0.1795 },
-    { "date": "Nov 14", "asset": "LGTY", "pnl": 0.0174, "pnl_5x": 0.0868, "pnl_10x": 0.1736 },
-    { "date": "Nov 14", "asset": "ARPA", "pnl": 0.0216, "pnl_5x": 0.108, "pnl_10x": 0.216 },
-    { "date": "Nov 15", "asset": "HBAR", "pnl": 0.0184, "pnl_5x": 0.0921, "pnl_10x": 0.1842 },
-    { "date": "Nov 17", "asset": "ZEN", "pnl": 0.0214, "pnl_5x": 0.1072, "pnl_10x": 0.2144 },
-    { "date": "Nov 17", "asset": "QNT", "pnl": 0.029, "pnl_5x": 0.145, "pnl_10x": 0.2899 },
-    { "date": "Nov 18", "asset": "GAS", "pnl": 0.0166, "pnl_5x": 0.0832, "pnl_10x": 0.1663 },
-    { "date": "Nov 18", "asset": "HIFI", "pnl": 0.0213, "pnl_5x": 0.1063, "pnl_10x": 0.2126 },
-    { "date": "Nov 18", "asset": "MTL", "pnl": 0.0189, "pnl_5x": 0.0943, "pnl_10x": 0.1885 },
-    { "date": "Nov 18", "asset": "CYBER", "pnl": 0.0272, "pnl_5x": 0.1362, "pnl_10x": 0.2724 },
-    { "date": "Nov 18", "asset": "HOOK", "pnl": 0.0175, "pnl_5x": 0.0896, "pnl_10x": 0.1792 },
-    { "date": "Nov 18", "asset": "ICX", "pnl": 0.0253, "pnl_5x": 0.1266, "pnl_10x": 0.2522 },
-    { "date": "Nov 18", "asset": "OXT", "pnl": -0.0469, "pnl_5x": -0.2347, "pnl_10x": -0.4694 },
-    { "date": "Nov 19", "asset": "UNI", "pnl": 0.0187, "pnl_5x": 0.0937, "pnl_10x": 0.1874 },
-    { "date": "Nov 19", "asset": "POLYX", "pnl": 0.0166, "pnl_5x": 0.0879, "pnl_10x": 0.1657 },
-    { "date": "Nov 19", "asset": "ASTR", "pnl": 0.0168, "pnl_5x": 0.0841, "pnl_10x": 0.1682 },
-    { "date": "Nov 20", "asset": "ALGO", "pnl": 0.0232, "pnl_5x": 0.1158, "pnl_10x": 0.2316 },
-    { "date": "Nov 20", "asset": "MKR", "pnl": 0.0186, "pnl_5x": 0.0928, "pnl_10x": 0.1857 },
-    { "date": "Nov 20", "asset": "DOT", "pnl": 0.0288, "pnl_5x": 0.144, "pnl_10x": 0.2879 },
-    { "date": "Nov 20", "asset": "ONE", "pnl": 0.0363, "pnl_5x": 0.1815, "pnl_10x": 0.363 },
-    { "date": "Nov 20", "asset": "ATOM", "pnl": 0.0243, "pnl_5x": 0.1216, "pnl_10x": 0.2431 },
-    { "date": "Nov 20", "asset": "SUSHI", "pnl": 0.032, "pnl_5x": 0.1598, "pnl_10x": 0.3196 },
-    { "date": "Nov 21", "asset": "GLMR", "pnl": 0.0274, "pnl_5x": 0.1371, "pnl_10x": 0.2742 },
-    { "date": "Nov 21", "asset": "IOST", "pnl": 0.0228, "pnl_5x": 0.1139, "pnl_10x": 0.2279 },
-    { "date": "Nov 21", "asset": "POWR", "pnl": 0.0284, "pnl_5x": 0.1421, "pnl_10x": 0.2841 },
-    { "date": "Nov 22", "asset": "STMX", "pnl": 0.0322, "pnl_5x": 0.1608, "pnl_10x": 0.3215 },
-    { "date": "Nov 22", "asset": "CKB", "pnl": 0.0184, "pnl_5x": 0.0919, "pnl_10x": 0.1837 },
-    { "date": "Nov 24", "asset": "KAVA", "pnl": 0.0233, "pnl_5x": 0.1164, "pnl_10x": 0.2329 },
-    { "date": "Nov 24", "asset": "ZEN", "pnl": 0.0325, "pnl_5x": 0.1624, "pnl_10x": 0.3247 },
-    { "date": "Nov 24", "asset": "CELR", "pnl": 0.0195, "pnl_5x": 0.0996, "pnl_10x": 0.1991 },
-    { "date": "Nov 25", "asset": "MEME", "pnl": 0.0194, "pnl_5x": 0.097, "pnl_10x": 0.1941 },
-    { "date": "Nov 26", "asset": "AR", "pnl": 0.0255, "pnl_5x": 0.1273, "pnl_10x": 0.2545 },
-    { "date": "Nov 26", "asset": "LIT", "pnl": 0.0217, "pnl_5x": 0.1086, "pnl_10x": 0.2171 },
-    { "date": "Nov 26", "asset": "JOE", "pnl": 0.0152, "pnl_5x": 0.0762, "pnl_10x": 0.1523 },
-    { "date": "Nov 26", "asset": "ADA", "pnl": 0.0256, "pnl_5x": 0.1278, "pnl_10x": 0.2558 },
-    { "date": "Nov 26", "asset": "DVDX", "pnl": 0.0254, "pnl_5x": 0.127, "pnl_10x": 0.2541 },
-    { "date": "Nov 27", "asset": "RLC", "pnl": 0.0211, "pnl_5x": 0.1053, "pnl_10x": 0.2105 },
-    { "date": "Nov 28", "asset": "STG", "pnl": 0.204, "pnl_5x": 0.1022, "pnl_10x": 0.2043 },
-    { "date": "Nov 29", "asset": "PERP", "pnl": 0.0206, "pnl_5x": 0.103, "pnl_10x": 0.2059 }
-  ]
+  {
+    "date": "Nov 4",
+    "asset": "RVN",
+    "pnl": 0.0245,
+    "pnl_5x": 0.1226,
+    "pnl_10x": 0.2451,
+    "pnl_20x": 0.4902
+  },
+  {
+    "date": "Nov 5",
+    "asset": "KEY",
+    "pnl": 0.0208,
+    "pnl_5x": 0.1038,
+    "pnl_10x": 0.2078,
+    "pnl_20x": 0.4156
+  },
+  {
+    "date": "Nov 6",
+    "asset": "PENDLE",
+    "pnl": 0.0202,
+    "pnl_5x": 0.101,
+    "pnl_10x": 0.202,
+    "pnl_20x": 0.404
+  },
+  {
+    "date": "Nov 6",
+    "asset": "MASK",
+    "pnl": 0.0211,
+    "pnl_5x": 0.1054,
+    "pnl_10x": 0.2108,
+    "pnl_20x": 0.4216
+  },
+  {
+    "date": "Nov 7",
+    "asset": "DOG",
+    "pnl": -0.0483,
+    "pnl_5x": -0.2417,
+    "pnl_10x": -0.4834,
+    "pnl_20x": -0.9668
+  },
+  {
+    "date": "Nov 7",
+    "asset": "LDO",
+    "pnl": 0.0184,
+    "pnl_5x": 0.0921,
+    "pnl_10x": 0.1843,
+    "pnl_20x": 0.3686
+  },
+  {
+    "date": "Nov 7",
+    "asset": "BCH",
+    "pnl": 0.0189,
+    "pnl_5x": 0.0943,
+    "pnl_10x": 0.1885,
+    "pnl_20x": 0.377
+  },
+  {
+    "date": "Nov 8",
+    "asset": "ILV",
+    "pnl": 0.0171,
+    "pnl_5x": 0.0853,
+    "pnl_10x": 0.1705,
+    "pnl_20x": 0.341
+  },
+  {
+    "date": "Nov 11",
+    "asset": "SXP",
+    "pnl": 0.0235,
+    "pnl_5x": 0.1175,
+    "pnl_10x": 0.235,
+    "pnl_20x": 0.47
+  },
+  {
+    "date": "Nov 11",
+    "asset": "PXS",
+    "pnl": 0.0279,
+    "pnl_5x": 0.1395,
+    "pnl_10x": 0.2789,
+    "pnl_20x": 0.5578
+  },
+  {
+    "date": "Nov 11",
+    "asset": "SNX",
+    "pnl": 0.0204,
+    "pnl_5x": 0.1022,
+    "pnl_10x": 0.2044,
+    "pnl_20x": 0.4088
+  },
+  {
+    "date": "Nov 12",
+    "asset": "KAVA",
+    "pnl": 0.0187,
+    "pnl_5x": 0.0935,
+    "pnl_10x": 0.1871,
+    "pnl_20x": 0.3742
+  },
+  {
+    "date": "Nov 12",
+    "asset": "BAT",
+    "pnl": 0.0145,
+    "pnl_5x": 0.0725,
+    "pnl_10x": 0.145,
+    "pnl_20x": 0.29
+  },
+  {
+    "date": "Nov 13",
+    "asset": "DOGE",
+    "pnl": 0.0287,
+    "pnl_5x": 0.1434,
+    "pnl_10x": 0.2867,
+    "pnl_20x": 0.5734
+  },
+  {
+    "date": "Nov 13",
+    "asset": "COMBO",
+    "pnl": 0.0254,
+    "pnl_5x": 0.1268,
+    "pnl_10x": 0.2536,
+    "pnl_20x": 0.5072
+  },
+  {
+    "date": "Nov 13",
+    "asset": "XLM",
+    "pnl": 0.0189,
+    "pnl_5x": 0.0944,
+    "pnl_10x": 0.1888,
+    "pnl_20x": 0.3776
+  },
+  {
+    "date": "Nov 13",
+    "asset": "RUNE",
+    "pnl": 0.0282,
+    "pnl_5x": 0.1408,
+    "pnl_10x": 0.2816,
+    "pnl_20x": 0.5632
+  },
+  {
+    "date": "Nov 13",
+    "asset": "RIF",
+    "pnl": 0.0181,
+    "pnl_5x": 0.0943,
+    "pnl_10x": 0.1886,
+    "pnl_20x": 0.3772
+  },
+  {
+    "date": "Nov 13",
+    "asset": "ARK",
+    "pnl": 0.018,
+    "pnl_5x": 0.0898,
+    "pnl_10x": 0.1795,
+    "pnl_20x": 0.359
+  },
+  {
+    "date": "Nov 14",
+    "asset": "LGTY",
+    "pnl": 0.0174,
+    "pnl_5x": 0.0868,
+    "pnl_10x": 0.1736,
+    "pnl_20x": 0.3472
+  },
+  {
+    "date": "Nov 14",
+    "asset": "ARPA",
+    "pnl": 0.0216,
+    "pnl_5x": 0.108,
+    "pnl_10x": 0.216,
+    "pnl_20x": 0.432
+  },
+  {
+    "date": "Nov 15",
+    "asset": "HBAR",
+    "pnl": 0.0184,
+    "pnl_5x": 0.0921,
+    "pnl_10x": 0.1842,
+    "pnl_20x": 0.3684
+  },
+  {
+    "date": "Nov 17",
+    "asset": "ZEN",
+    "pnl": 0.0214,
+    "pnl_5x": 0.1072,
+    "pnl_10x": 0.2144,
+    "pnl_20x": 0.4288
+  },
+  {
+    "date": "Nov 17",
+    "asset": "QNT",
+    "pnl": 0.029,
+    "pnl_5x": 0.145,
+    "pnl_10x": 0.2899,
+    "pnl_20x": 0.5798
+  },
+  {
+    "date": "Nov 18",
+    "asset": "GAS",
+    "pnl": 0.0166,
+    "pnl_5x": 0.0832,
+    "pnl_10x": 0.1663,
+    "pnl_20x": 0.3326
+  },
+  {
+    "date": "Nov 18",
+    "asset": "HIFI",
+    "pnl": 0.0213,
+    "pnl_5x": 0.1063,
+    "pnl_10x": 0.2126,
+    "pnl_20x": 0.4252
+  },
+  {
+    "date": "Nov 18",
+    "asset": "MTL",
+    "pnl": 0.0189,
+    "pnl_5x": 0.0943,
+    "pnl_10x": 0.1885,
+    "pnl_20x": 0.377
+  },
+  {
+    "date": "Nov 18",
+    "asset": "CYBER",
+    "pnl": 0.0272,
+    "pnl_5x": 0.1362,
+    "pnl_10x": 0.2724,
+    "pnl_20x": 0.5448
+  },
+  {
+    "date": "Nov 18",
+    "asset": "HOOK",
+    "pnl": 0.0175,
+    "pnl_5x": 0.0896,
+    "pnl_10x": 0.1792,
+    "pnl_20x": 0.3584
+  },
+  {
+    "date": "Nov 18",
+    "asset": "ICX",
+    "pnl": 0.0253,
+    "pnl_5x": 0.1266,
+    "pnl_10x": 0.2522,
+    "pnl_20x": 0.5044
+  },
+  {
+    "date": "Nov 18",
+    "asset": "OXT",
+    "pnl": -0.0469,
+    "pnl_5x": -0.2347,
+    "pnl_10x": -0.4694,
+    "pnl_20x": -0.9388
+  },
+  {
+    "date": "Nov 19",
+    "asset": "UNI",
+    "pnl": 0.0187,
+    "pnl_5x": 0.0937,
+    "pnl_10x": 0.1874,
+    "pnl_20x": 0.3748
+  },
+  {
+    "date": "Nov 19",
+    "asset": "POLYX",
+    "pnl": 0.0166,
+    "pnl_5x": 0.0879,
+    "pnl_10x": 0.1657,
+    "pnl_20x": 0.3314
+  },
+  {
+    "date": "Nov 19",
+    "asset": "ASTR",
+    "pnl": 0.0168,
+    "pnl_5x": 0.0841,
+    "pnl_10x": 0.1682,
+    "pnl_20x": 0.3364
+  },
+  {
+    "date": "Nov 20",
+    "asset": "ALGO",
+    "pnl": 0.0232,
+    "pnl_5x": 0.1158,
+    "pnl_10x": 0.2316,
+    "pnl_20x": 0.4632
+  },
+  {
+    "date": "Nov 20",
+    "asset": "MKR",
+    "pnl": 0.0186,
+    "pnl_5x": 0.0928,
+    "pnl_10x": 0.1857,
+    "pnl_20x": 0.3714
+  },
+  {
+    "date": "Nov 20",
+    "asset": "DOT",
+    "pnl": 0.0288,
+    "pnl_5x": 0.144,
+    "pnl_10x": 0.2879,
+    "pnl_20x": 0.5758
+  },
+  {
+    "date": "Nov 20",
+    "asset": "ONE",
+    "pnl": 0.0363,
+    "pnl_5x": 0.1815,
+    "pnl_10x": 0.363,
+    "pnl_20x": 0.726
+  },
+  {
+    "date": "Nov 20",
+    "asset": "ATOM",
+    "pnl": 0.0243,
+    "pnl_5x": 0.1216,
+    "pnl_10x": 0.2431,
+    "pnl_20x": 0.4862
+  },
+  {
+    "date": "Nov 20",
+    "asset": "SUSHI",
+    "pnl": 0.032,
+    "pnl_5x": 0.1598,
+    "pnl_10x": 0.3196,
+    "pnl_20x": 0.6392
+  },
+  {
+    "date": "Nov 21",
+    "asset": "GLMR",
+    "pnl": 0.0274,
+    "pnl_5x": 0.1371,
+    "pnl_10x": 0.2742,
+    "pnl_20x": 0.5484
+  },
+  {
+    "date": "Nov 21",
+    "asset": "IOST",
+    "pnl": 0.0228,
+    "pnl_5x": 0.1139,
+    "pnl_10x": 0.2279,
+    "pnl_20x": 0.4558
+  },
+  {
+    "date": "Nov 21",
+    "asset": "POWR",
+    "pnl": 0.0284,
+    "pnl_5x": 0.1421,
+    "pnl_10x": 0.2841,
+    "pnl_20x": 0.5682
+  },
+  {
+    "date": "Nov 22",
+    "asset": "STMX",
+    "pnl": 0.0322,
+    "pnl_5x": 0.1608,
+    "pnl_10x": 0.3215,
+    "pnl_20x": 0.643
+  },
+  {
+    "date": "Nov 22",
+    "asset": "CKB",
+    "pnl": 0.0184,
+    "pnl_5x": 0.0919,
+    "pnl_10x": 0.1837,
+    "pnl_20x": 0.3674
+  },
+  {
+    "date": "Nov 24",
+    "asset": "KAVA",
+    "pnl": 0.0233,
+    "pnl_5x": 0.1164,
+    "pnl_10x": 0.2329,
+    "pnl_20x": 0.4658
+  },
+  {
+    "date": "Nov 24",
+    "asset": "ZEN",
+    "pnl": 0.0325,
+    "pnl_5x": 0.1624,
+    "pnl_10x": 0.3247,
+    "pnl_20x": 0.6494
+  },
+  {
+    "date": "Nov 24",
+    "asset": "CELR",
+    "pnl": 0.0195,
+    "pnl_5x": 0.0996,
+    "pnl_10x": 0.1991,
+    "pnl_20x": 0.3982
+  },
+  {
+    "date": "Nov 25",
+    "asset": "MEME",
+    "pnl": 0.0194,
+    "pnl_5x": 0.097,
+    "pnl_10x": 0.1941,
+    "pnl_20x": 0.3882
+  },
+  {
+    "date": "Nov 26",
+    "asset": "AR",
+    "pnl": 0.0255,
+    "pnl_5x": 0.1273,
+    "pnl_10x": 0.2545,
+    "pnl_20x": 0.509
+  },
+  {
+    "date": "Nov 26",
+    "asset": "LIT",
+    "pnl": 0.0217,
+    "pnl_5x": 0.1086,
+    "pnl_10x": 0.2171,
+    "pnl_20x": 0.4342
+  },
+  {
+    "date": "Nov 26",
+    "asset": "JOE",
+    "pnl": 0.0152,
+    "pnl_5x": 0.0762,
+    "pnl_10x": 0.1523,
+    "pnl_20x": 0.3046
+  },
+  {
+    "date": "Nov 26",
+    "asset": "ADA",
+    "pnl": 0.0256,
+    "pnl_5x": 0.1278,
+    "pnl_10x": 0.2558,
+    "pnl_20x": 0.5116
+  },
+  {
+    "date": "Nov 26",
+    "asset": "DVDX",
+    "pnl": 0.0254,
+    "pnl_5x": 0.127,
+    "pnl_10x": 0.2541,
+    "pnl_20x": 0.5082
+  },
+  {
+    "date": "Nov 27",
+    "asset": "RLC",
+    "pnl": 0.0211,
+    "pnl_5x": 0.1053,
+    "pnl_10x": 0.2105,
+    "pnl_20x": 0.421
+  },
+  {
+    "date": "Nov 28",
+    "asset": "STG",
+    "pnl": 0.204,
+    "pnl_5x": 0.1022,
+    "pnl_10x": 0.2043,
+    "pnl_20x": 0.4086
+  },
+  {
+    "date": "Nov 29",
+    "asset": "PERP",
+    "pnl": 0.0206,
+    "pnl_5x": 0.103,
+    "pnl_10x": 0.2059,
+    "pnl_20x": 0.4118
+  }
+]
 }

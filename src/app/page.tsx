@@ -10,6 +10,7 @@ interface Trade {
   pnl: number;
   pnl_5x: number;
   pnl_10x: number;
+  pnl_20x: number;
 }
 
 interface TradesData {
@@ -23,11 +24,12 @@ interface BankrollData {
   bankroll_1x: number;
   bankroll_5x: number;
   bankroll_10x: number;
+  bankroll_20x: number;
 }
 
 const LeverageComparison: React.FC = () => {
   const [initialInvestment, setInitialInvestment] = useState<number>(100);
-  const [betPercentage, setBetPercentage] = useState<number>(20);
+  const [betPercentage, setBetPercentage] = useState<number>(10);
   const [selectedMonth, setSelectedMonth] = useState<string>(Object.keys(tradesData)[0]);
   const [data, setData] = useState<BankrollData[]>([]);
   const [final, setFinal] = useState<BankrollData | null>(null);
@@ -37,6 +39,7 @@ const LeverageComparison: React.FC = () => {
       let bankroll_1x = investment;
       let bankroll_5x = investment;
       let bankroll_10x = investment;
+      let bankroll_20x = investment;
       const betMultiplier = betPercentage / 100;
       const calculatedData: BankrollData[] = [];
       let tradeNumber = 0;
@@ -61,6 +64,11 @@ const LeverageComparison: React.FC = () => {
         const pnl_10x = betAmount_10x * trade.pnl_10x;
         bankroll_10x += pnl_10x;
 
+        // 20x
+        const betAmount_20x = bankroll_20x * betMultiplier;
+        const pnl_20x = betAmount_20x * trade.pnl_20x;
+        bankroll_20x += pnl_20x;
+
         calculatedData.push({
           x: tradeNumber,
           date: trade.date,
@@ -68,6 +76,7 @@ const LeverageComparison: React.FC = () => {
           bankroll_1x: Math.round(bankroll_1x * 100) / 100,
           bankroll_5x: Math.round(bankroll_5x * 100) / 100,
           bankroll_10x: Math.round(bankroll_10x * 100) / 100,
+          bankroll_20x: Math.round(bankroll_20x * 100) / 100,
         });
       });
 
@@ -106,7 +115,7 @@ const LeverageComparison: React.FC = () => {
       <Card className="max-w-5xl w-full">
         <CardHeader>
           <CardTitle className="text-xl pb-2">Poligrafo da Crypto Girl</CardTitle>
-          <p className="text-sm text-muted-foreground w-2/3">
+          <p className="text-sm text-muted-foreground pb-3">
             Simulação de ganhos mensais com base nos sinais partilhados pela{" "}
             <a
               href="https://www.instagram.com/cryptogirl.pt/"
@@ -116,10 +125,8 @@ const LeverageComparison: React.FC = () => {
             >
               @Cryptogirl.pt
             </a>{" "}
-            considerando sempre no 1º Alvo, mas utilizando stop loss total em casos de perda.
-          </p>
-          <p className="text-sm text-muted-foreground pb-5">
-            Os resultados reais podem variar significativamente dependendo da estratégia de saída.
+            considerando sempre no 1º Alvo, mas utilizando stop loss total em casos de perda. Os resultados reais podem
+            variar significativamente dependendo da estratégia de saída.
           </p>
           <div className="mt-4 flex flex-col md:flex-row items-start md:items-center gap-4">
             <div className="flex items-center gap-2">
@@ -173,7 +180,7 @@ const LeverageComparison: React.FC = () => {
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               <div className="p-4 border rounded">
                 <div className="text-sm font-medium">1x (Sem Alavancagem)</div>
                 <div className="text-2xl font-bold">${final?.bankroll_1x.toFixed(2)}</div>
@@ -193,6 +200,13 @@ const LeverageComparison: React.FC = () => {
                 <div className="text-2xl font-bold">${final?.bankroll_10x.toFixed(2)}</div>
                 <div className="text-sm text-gray-500">
                   Retorno: {(((final?.bankroll_10x ?? 0) / initialInvestment - 1) * 100).toFixed(2)}%
+                </div>
+              </div>
+              <div className="p-4 border rounded">
+                <div className="text-sm font-medium">20x Alavancagem</div>
+                <div className="text-2xl font-bold">${final?.bankroll_20x.toFixed(2)}</div>
+                <div className="text-sm text-gray-500">
+                  Retorno: {(((final?.bankroll_20x ?? 0) / initialInvestment - 1) * 100).toFixed(2)}%
                 </div>
               </div>
             </div>
@@ -223,6 +237,13 @@ const LeverageComparison: React.FC = () => {
                     dataKey="bankroll_10x"
                     name="10x Alavancagem"
                     stroke="#ff7300"
+                    strokeWidth={2}
+                  />
+                  <Line
+                    type="monotone"
+                    dataKey="bankroll_20x"
+                    name="20x Alavancagem"
+                    stroke="#FF0000"
                     strokeWidth={2}
                   />
                 </LineChart>
