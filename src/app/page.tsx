@@ -2,7 +2,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import tradesData from "@/lib/trades.json";
 
 interface Trade {
   date: string;
@@ -30,7 +29,8 @@ interface BankrollData {
 const LeverageComparison: React.FC = () => {
   const [initialInvestment, setInitialInvestment] = useState<number>(100);
   const [betPercentage, setBetPercentage] = useState<number>(10);
-  const [selectedMonth, setSelectedMonth] = useState<string>(Object.keys(tradesData)[0]);
+  const [tradesData, setTradesData] = useState<TradesData>({});
+  const [selectedMonth, setSelectedMonth] = useState<string>("");
   const [data, setData] = useState<BankrollData[]>([]);
   const [final, setFinal] = useState<BankrollData | null>(null);
 
@@ -44,7 +44,7 @@ const LeverageComparison: React.FC = () => {
       const calculatedData: BankrollData[] = [];
       let tradeNumber = 0;
 
-      const trades = (tradesData as TradesData)[selectedMonth] || [];
+      const trades = tradesData[selectedMonth] || [];
 
       trades.forEach((trade) => {
         tradeNumber += 1;
@@ -91,6 +91,17 @@ const LeverageComparison: React.FC = () => {
     setFinal(newData[newData.length - 1] || null);
   }, [initialInvestment, betPercentage, selectedMonth]);
 
+  useEffect(() => {
+    const fetchTradesData = async () => {
+      const response = await fetch("/trades.json");
+      const data: TradesData = await response.json();
+      setTradesData(data);
+      setSelectedMonth(Object.keys(data)[0]);
+    };
+
+    fetchTradesData();
+  }, []);
+
   const handleInvestmentChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInitialInvestment(Math.max(1, Number(e.target.value)));
   };
@@ -115,7 +126,7 @@ const LeverageComparison: React.FC = () => {
       <Card className="max-w-5xl w-full">
         <CardHeader>
           <CardTitle className="text-xl pb-2">Poligrafo da Crypto Girl</CardTitle>
-          <p className="text-sm text-muted-foreground pb-3">
+          <p className="text-sm text-muted-foreground pb-4">
             Simulação de ganhos mensais com base nos sinais partilhados pela{" "}
             <a
               href="https://www.instagram.com/cryptogirl.pt/"
