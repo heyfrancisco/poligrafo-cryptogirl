@@ -261,6 +261,32 @@ const LeverageComparison: React.FC = () => {
               </ResponsiveContainer>
             </div>
           </div>
+          <p className="text-xs text-muted-foreground pt-4 px-4 pb-1">
+            Código fonte disponível no{" "}
+            <a
+              href="https://github.com/yourusername/calculadora-crypto"
+              className="text-indigo-500 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            . Histórico de trades podem ser encontrado em{" "}
+            <a
+              href="/trades.json"
+              className="text-indigo-500 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              /trades.json.{" "}
+            </a>
+          </p>
+          <p className="text-xs text-muted-foreground px-4 pb-1">
+            Trading com alavancagem envolve alto risco de perda rápida de capital.
+          </p>
+          <p className="text-xs text-muted-foreground px-4">
+            Os resultados apresentados são simulações baseadas em dados históricos e não garantem retornos futuros.
+          </p>
         </CardContent>
       </Card>
     </div>
